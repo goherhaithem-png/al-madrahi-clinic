@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مستوصف الشهيد راشد علي المضرحي</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --accent: #198754;
+      --emergency: #dc3545;
+      --offer: #d97706;
+      --offer-dark: #b45309;
+      --bg-light: #f8fafc;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #eff6ff;
+      padding: 3px;
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.3;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.1rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.93rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+      color: var(--white);
+      padding: 3.8rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 1.8rem;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .btn-whatsapp {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #157347;
+    }
+
+    .btn-call {
+      background-color: var(--white);
+      color: var(--primary-dark);
+    }
+
+    .btn-call:hover {
+      background-color: #e2e8f0;
+    }
+
+    .admin-subtle-link {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 0.78rem;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .admin-subtle-link:hover {
+      color: var(--offer-dark);
+    }
+
+    section {
+      padding: 3.5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.65rem;
+      margin-bottom: 0.45rem;
+      color: var(--text-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 2.3rem;
+    }
+
+    .offers-footer-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+
+    .offer-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: var(--offer-dark);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card.offer-card {
+      border-top-color: var(--offer);
+    }
+
+    .btn-offer {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      background-color: #fffbeb;
+      color: var(--offer-dark);
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-offer:hover {
+      background-color: var(--offer);
+      color: var(--white);
+      border-color: var(--offer);
+    }
+
+    .category-heading {
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin: 2.3rem 0 1.1rem;
+      padding-right: 0.75rem;
+      border-right: 4px solid var(--primary);
+    }
+
+    .category-heading:first-of-type {
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 1.35rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      border-top: 4px solid var(--primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .card.urgent {
+      border-top-color: var(--emergency);
+    }
+
+    .card h3 {
+      margin-bottom: 0.45rem;
+      color: var(--text-dark);
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .btn-book {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      background-color: #eff6ff;
+      color: var(--primary-dark);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-book:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .btn-secondary-action {
+      width: 100%;
+      padding: 0.62rem 1rem;
+      background-color: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: 0.2s;
+      text-align: center;
+    }
+
+    .btn-secondary-action:hover {
+      background-color: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .gallery-item {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      background: #e2e8f0;
+    }
+
+    .gallery-caption {
+      padding: 0.9rem 1.1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .info-box {
+      background: var(--white);
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.2rem;
+    }
+
+    .contact-item {
+      margin-bottom: 1rem;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--primary-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item a,
+    .contact-item span.coords {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.02rem;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .map-box {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      min-height: 320px;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 999;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--white);
+      width: 100%;
+      max-width: 480px;
+      border-radius: 14px;
+      padding: 1.7rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      position: relative;
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+
+    .modal.modal-wide {
+      max-width: 680px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: #f1f5f9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text-dark);
+    }
+
+    .modal h3 {
+      color: var(--primary-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .modal p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group {
+      margin-bottom: 0.95rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.32rem;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.94rem;
+      background: var(--white);
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    #deliveryFields {
+      display: none;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    #deliveryFields.show {
+      display: block;
+    }
+
+    .admin-offer-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 0.9rem;
+      background: #f8fafc;
+    }
+
+    .admin-offer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .admin-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .btn-sm {
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+
+    .btn-delete {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    .btn-add-offer {
+      background: #eff6ff;
+      color: var(--primary-dark);
+      border: 1px dashed #93c5fd;
+      width: 100%;
+      padding: 0.65rem;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .export-box {
+      width: 100%;
+      min-height: 120px;
+      font-family: monospace;
+      font-size: 0.8rem;
+      direction: ltr;
+      text-align: left;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 0.75rem;
+      border-radius: 8px;
+      margin-top: 0.6rem;
+      display: none;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid,
+      .admin-row-2 {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 1.55rem;
+      }
+      .navbar {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="شعار مستوصف الشهيد راشد علي المضرحي" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%230d6efd%22/><path d=%22M27 14h10v13h13v10H37v13H27V37H14V27h13z%22 fill=%22white%22/></svg>'" />
+        <div class="logo-text">مستوصف الشهيد<br>راشد علي المضرحي</div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#offers">العروض</a></li>
+        <li><a href="#services">العيادات والأقسام</a></li>
+        <li><a href="#gallery">صور المستوصف</a></li>
+        <li><a href="#contact">الموقع والتواصل</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>رعاية طبية شاملة وموثوقة على مدار الساعة</h1>
+      <p>نقدم خدمات العيادات التخصصية، العمليات والجراحة، الرقود العام والخاص، العناية المركزة، المختبرات، الصيدلية المركزية، والطوارئ على مدار 24 ساعة.</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-whatsapp" onclick="openBookingModal('حجز عام / استشارة')">احجز موعدك الآن عبر واتساب</button>
+        <a href="tel:+967776805486" class="btn btn-call">اتصل بالاستقبال: 776805486</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم العروض والتخفيضات -->
+  <section id="offers" style="background:#ffffff;">
+    <div class="container">
+      <h2 class="section-title">العروض والتخفيضات</h2>
+      <p class="section-subtitle">باقات وتخفيضات طبية مميزة لخدمة المراجعين</p>
+
+      <div class="grid" id="offersGrid"></div>
+
+      <div class="offers-footer-bar">
+        <button type="button" class="admin-subtle-link" onclick="requestAdminAccess()">إدارة العروض</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">العيادات والأقسام الطبية</h2>
+      <p class="section-subtitle">اختر العيادة أو القسم المناسب للحجز أو الاستعلام أو طلب العلاج</p>
+
+      <h3 class="category-heading">العيادات التخصصية</h3>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <h3>عيادة باطنية</h3>
+            <p>تشخيص وعلاج أمراض الجهاز الهضمي، القلب، السكري، الضغط، والأمراض الباطنية العامة.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة باطنية')">احجز في عيادة الباطنية</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>عيادة أسنان</h3>
+            <p>العلاج التحفظي، الحشوات، التنظيف، الخلع، والعناية بصحة الفم والأسنان.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة أسنان')">احجز في عيادة الأسنان</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>عيادة أنف وأذن وحنجرة</h3>
+            <p>فحص وعلاج مشاكل الأنف والجيوب الأنفية، الأذن، الحنجرة، واللوزتين.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة أنف وأذن وحنجرة')">احجز في عيادة الأنف والأذن</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>عيادة العيون</h3>
+            <p>فحص النظر، تشخيص أمراض العيون، ومتابعة الحالات البصرية.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة العيون')">احجز في عيادة العيون</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>عيادة التجميل والعناية بالبشرة</h3>
+            <p>علاجات البشرة، العناية الجلدية، والإجراءات التجميلية بإشراف مختصين.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة التجميل والعناية بالبشرة')">احجز في عيادة التجميل</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>عيادة أطفال</h3>
+            <p>متابعة صحة ونمو الأطفال وتشخيص وعلاج الأمراض الشائعة لدى الأطفال.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة أطفال')">احجز في عيادة الأطفال</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>عيادة الفيزيوثيرابي</h3>
+            <p>جلسات العلاج الطبيعي والتأهيل الحركي للعمود الفقري، المفاصل، وما بعد الإصابات.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('عيادة الفيزيوثيرابي')">احجز في عيادة الفيزيوثيرابي</button>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="category-heading">الأقسام العلاجية والرقود والعمليات</h3>
+      <div class="grid">
+        <div class="card">
+          <div>
+            <h3>قسم الحضانة</h3>
+            <p>رعاية متخصصة لحديثي الولادة والخدج تحت إشراف طبي وتمريضي مستمر.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم الحضانة')">استفسار / حجز قسم الحضانة</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم النساء والولادة</h3>
+            <p>متابعة الحمل، الولادة، والرعاية الصحية المتكاملة للمرأة.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم النساء والولادة')">احجز في قسم النساء والولادة</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم العمليات والجراحة</h3>
+            <p>تجهيزات جراحية لإجراء العمليات وفق المعايير الطبية المعتمدة.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم العمليات والجراحة')">استفسار / حجز جراحة</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم الرقود العام والخاص</h3>
+            <p>غرف رقود عامة وخاصة مريحة لتوفير المتابعة الطبية المستمرة للمرضى.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم الرقود العام والخاص')">حجز غرفة رقود</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم العناية المركزة</h3>
+            <p>مراقبة مكثفة ورعاية حرجة للحالات التي تتطلب متابعة دقيقة ومستمرة.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم العناية المركزة')">تواصل مع العناية المركزة</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم الغسيل الكلوي</h3>
+            <p>جلسات غسيل الكلى بمتابعة طبية وتمريضية متخصصة.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم الغسيل الكلوي')">حجز جلسة غسيل كلوي</button>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="category-heading">الطوارئ والخدمات المساندة</h3>
+      <div class="grid">
+        <div class="card urgent">
+          <div>
+            <h3>قسم الطوارئ على مدار 24 ساعة</h3>
+            <p>استقبال الحالات الطارئة والإسعافات الأولية على مدار الساعة طوال أيام الأسبوع.</p>
+          </div>
+          <div class="card-actions">
+            <a href="tel:+967776805486" class="btn-book" style="border-color:#fecaca; color:#b91c1c; background:#fef2f2;">اتصال طارئ: 776805486</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم المختبرات</h3>
+            <p>إجراء الفحوصات والتحاليل المخبرية لدعم التشخيص الطبي الدقيق ومتابعة النتائج.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم المختبرات')">حجز فحص مخبري</button>
+            <button class="btn-secondary-action" onclick="openLabModal()">استعلام عن النتائج</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم الصيدلية المركزية</h3>
+            <p>الاستعلام عن توفر الأدوية وطلب العلاج مع إمكانية التوصيل.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-secondary-action" onclick="openPharmacyModal()">استعلام وطلب دواء / توصيل</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>قسم التحصين ولقاح الأطفال</h3>
+            <p>تقديم اللقاحات وجرعات التحصين الأساسية للأطفال وفق الجداول المعتمدة.</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-book" onclick="openBookingModal('قسم التحصين ولقاح الأطفال')">حجز موعد تحصين</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- معرض صور المستوصف -->
+  <section id="gallery" style="background:#ffffff;">
+    <div class="container">
+      <h2 class="section-title">جولة داخل المستوصف</h2>
+      <p class="section-subtitle">تجهيزات طبية حديثة وبيئة علاجية مريحة لخدمة المرضى</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/clinic1.jpg" alt="مبنى مستوصف الشهيد راشد علي المضرحي" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2e8f0%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23475569%22 font-family=%22sans-serif%22 font-size=%2216%22>أضف صورة الواجهة: images/clinic1.jpg</text></svg>'" />
+          <div class="gallery-caption">مبنى واستقبال المستوصف</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/clinic2.jpg" alt="العيادات التخصصية والطوارئ" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2e8f0%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23475569%22 font-family=%22sans-serif%22 font-size=%2216%22>أضف صورة العيادات: images/clinic2.jpg</text></svg>'" />
+          <div class="gallery-caption">العيادات التخصصية وأقسام الرقود</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/clinic3.jpg" alt="المختبرات والأجهزة الطبية" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22220%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2e8f0%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23475569%22 font-family=%22sans-serif%22 font-size=%2216%22>أضف صورة المختبر: images/clinic3.jpg</text></svg>'" />
+          <div class="gallery-caption">قسم المختبرات والتجهيزات الطبية</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الموقع والتواصل وخرائط جوجل -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">الموقع والتواصل</h2>
+      <p class="section-subtitle">نسعد بخدمتكم واستقبال استفساراتكم على مدار الساعة</p>
+      <div class="contact-grid">
+        <div class="info-box">
+          <div>
+            <div class="contact-item">
+              <strong>هاتف الاستقبال (اتصال مباشر):</strong>
+              <a href="tel:+967776805486">776805486</a>
+            </div>
+            <div class="contact-item">
+              <strong>واتساب الحجوزات والاستفسارات:</strong>
+              <a href="https://wa.me/967774529656" target="_blank">774529656</a>
+            </div>
+            <div class="contact-item">
+              <strong>إحداثيات الموقع الجغرافي:</strong>
+              <span class="coords">13.981198, 44.460097</span>
+            </div>
+            <div class="contact-item">
+              <strong>أوقات العمل:</strong>
+              <span>قسم الطوارئ يعمل 24 ساعة يومياً</span>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:0.7rem;">
+            <a href="https://wa.me/967774529656?text=مرحباً، أود الاستفسار من مستوصف الشهيد راشد علي المضرحي" target="_blank" class="btn btn-whatsapp">مراسلة عبر واتساب</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=13.981198,44.460097" target="_blank" class="btn btn-book">فتح الموقع والاتجاهات في خرائط جوجل</a>
+          </div>
+        </div>
+
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps?q=13.981198,44.460097&hl=ar&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="موقع مستوصف الشهيد راشد علي المضرحي">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 مستوصف الشهيد راشد علي المضرحي - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <!-- 1. نافذة حجز موعد -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal">
+      <button type="button" class="modal-close" onclick="closeModal('bookingModal')">×</button>
+      <h3>حجز موعد</h3>
+      <p id="selectedClinicLabel">القسم المختار: <strong>-</strong></p>
+
+      <form onsubmit="submitBooking(event)">
+        <input type="hidden" id="clinicNameInput" />
+
+        <div class="form-group">
+          <label for="patientName">اسم المريض الكامل *</label>
+          <input type="text" id="patientName" placeholder="اكتب الاسم الثلاثي أو الرباعي" required />
+        </div>
+
+        <div class="form-group">
+          <label for="patientAge">العمر (بالسنوات) *</label>
+          <input type="number" id="patientAge" min="0" max="120" placeholder="مثال: 35" required />
+        </div>
+
+        <div class="form-group">
+          <label for="visitTime">الفترة المفضلة</label>
+          <select id="visitTime">
+            <option value="الفترة الصباحية">الفترة الصباحية</option>
+            <option value="الفترة المسائية">الفترة المسائية</option>
+            <option value="في أقرب وقت ممكن">في أقرب وقت ممكن</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="bookingNotes">ملاحظات إضافية (اختياري)</label>
+          <textarea id="bookingNotes" rows="3" placeholder="اكتب أي ملاحظات طبية أو تفاصيل تود إضافتها مع الحجز..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width:100%;">إرسال طلب الحجز عبر واتساب</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. نافذة الصيدلية المركزية -->
+  <div class="modal-overlay" id="pharmacyModal">
+    <div class="modal">
+      <button type="button" class="modal-close" onclick="closeModal('pharmacyModal')">×</button>
+      <h3>الصيدلية المركزية - استعلام وطلب علاج</h3>
+      <p>أدخل بيانات الدواء المطلوب وسنقوم بالرد عليك وتأكيد التوفر أو التوصيل عبر واتساب.</p>
+
+      <form onsubmit="submitPharmacyRequest(event)">
+        <div class="form-group">
+          <label for="medName">اسم الدواء *</label>
+          <input type="text" id="medName" placeholder="مثال: أموكسيسيلين أو باراسيتامول" required />
+        </div>
+
+        <div class="form-group">
+          <label for="medStrength">تركيز الدواء *</label>
+          <input type="text" id="medStrength" placeholder="مثال: 500mg أو 1g أو 250mg/5ml" required />
+        </div>
+
+        <div class="form-group">
+          <label for="medType">نوع الدواء *</label>
+          <select id="medType" required>
+            <option value="أقراص / كبسولات">أقراص / كبسولات</option>
+            <option value="شراب / معلق">شراب / معلق</option>
+            <option value="حقن / إبر">حقن / إبر</option>
+            <option value="قطرة (عين / أذن / أنف)">قطرة (عين / أذن / أنف)</option>
+            <option value="كريم / مرهم / جل">كريم / مرهم / جل</option>
+            <option value="بخاخ / تحاميل / أخرى">بخاخ / تحاميل / أخرى</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="medPatientName">اسم المريض *</label>
+          <input type="text" id="medPatientName" placeholder="اكتب اسم المريض" required />
+        </div>
+
+        <div class="form-group">
+          <label for="medPatientAge">العمر *</label>
+          <input type="number" id="medPatientAge" min="0" max="120" placeholder="مثال: 28" required />
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-row">
+            <input type="checkbox" id="deliveryCheckbox" onchange="toggleDeliveryFields()" />
+            <span>طلب العلاج مع خدمة التوصيل</span>
+          </label>
+        </div>
+
+        <div id="deliveryFields">
+          <div class="form-group" style="margin-bottom:0.75rem;">
+            <label for="deliveryAddress">عنوان التوصيل بالتفصيل *</label>
+            <input type="text" id="deliveryAddress" placeholder="الحي، الشارع، أقرب معلم" />
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="deliveryPhone">رقم هاتف للتواصل عند التوصيل</label>
+            <input type="tel" id="deliveryPhone" placeholder="مثال: 77xxxxxxx" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pharmacyNotes">ملاحظات (اختياري)</label>
+          <textarea id="pharmacyNotes" rows="2" placeholder="مثال: الكمية المطلوبة أو ملاحظات أخرى..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width:100%;">إرسال طلب العلاج عبر واتساب</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. نافذة المختبرات -->
+  <div class="modal-overlay" id="labModal">
+    <div class="modal">
+      <button type="button" class="modal-close" onclick="closeModal('labModal')">×</button>
+      <h3>قسم المختبرات - استعلام عن النتائج</h3>
+      <p>أدخل بيانات المريض للاستفسار عن جاهزية نتيجة الفحص المخبري عبر واتساب.</p>
+
+      <form onsubmit="submitLabInquiry(event)">
+        <div class="form-group">
+          <label for="labPatientName">اسم المريض الكامل *</label>
+          <input type="text" id="labPatientName" placeholder="اكتب اسم المريض كما هو مسجل في المختبر" required />
+        </div>
+
+        <div class="form-group">
+          <label for="labPatientAge">العمر *</label>
+          <input type="number" id="labPatientAge" min="0" max="120" placeholder="مثال: 40" required />
+        </div>
+
+        <div class="form-group">
+          <label for="labTestName">نوع التحليل / رقم الفحص (اختياري)</label>
+          <input type="text" id="labTestName" placeholder="مثال: صورة دم كاملة أو رقم الوصل" />
+        </div>
+
+        <div class="form-group">
+          <label for="labNotes">ملاحظات (اختياري)</label>
+          <textarea id="labNotes" rows="2" placeholder="أي ملاحظات إضافية..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width:100%;">إرسال استعلام النتيجة عبر واتساب</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. نافذة إدارة العروض الخاصة بالمدير فقط -->
+  <div class="modal-overlay" id="offersManagerModal">
+    <div class="modal modal-wide">
+      <button type="button" class="modal-close" onclick="closeModal('offersManagerModal')">×</button>
+      <h3>إدارة العروض والتخفيضات (خاص بالمدير)</h3>
+      <p>تحكم بالنسب والنصوص، فعّل أو أخفِ العروض، أو أضف عرضاً جديداً. لتعميم التعديلات على جميع الزوار، اضغط "توليد كود التثبيت الدائم" والصق الناتج مكان DEFAULT_OFFERS في الكود.</p>
+
+      <div id="adminOffersList"></div>
+
+      <button type="button" class="btn-add-offer" onclick="addNewOffer()">+ إضافة عرض جديد</button>
+
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+        <button type="button" class="btn btn-whatsapp" style="flex:1;" onclick="saveOffersChanges()">حفظ في هذا المتصفح</button>
+        <button type="button" class="btn btn-book" style="flex:1;" onclick="toggleExportCode()">توليد كود التثبيت الدائم</button>
+        <button type="button" class="btn-sm btn-delete" onclick="resetDefaultOffers()">استعادة الافتراضي</button>
+      </div>
+
+      <textarea id="exportCodeBox" class="export-box" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = '967774529656';
+    const STORAGE_KEY = 'almadrahi_offers_v1';
+
+    // غيّر كلمة المرور أدناه إلى كلمة مرور سرية خاصة بك
+    const ADMIN_PASS = '1234';
+    let isAdminAuthenticated = false;
+
+    const DEFAULT_OFFERS = [
+      {
+        id: 'ops',
+        badge: 'تخفيض العمليات',
+        title: 'تخفيضات على العمليات الجراحية بنسبة 20%',
+        description: 'خصم خاص على باقة من العمليات الجراحية المختارة بإشراف فريق جراحي متخصص.',
+        active: true
+      },
+      {
+        id: 'admission',
+        badge: 'تخفيض الرقود',
+        title: 'تخفيضات الرقود في كافة الأقسام بنسبة 15%',
+        description: 'تخفيض شامل على رسوم الرقود العام والخاص والأقسام العلاجية.',
+        active: true
+      },
+      {
+        id: 'lab-checkups',
+        badge: 'فحوصات وكشفيات',
+        title: 'تخفيضات في الفحوصات والكشفيات بكافة أنواعها بنسبة 25%',
+        description: 'خصومات على الكشفيات الطبية، الفحوصات المخبرية، والأشعة والتشخيص بمختلف أنواعها.',
+        active: true
+      }
+    ];
+
+    let offersData = loadOffers();
+    let draftOffers = [];
+
+    function loadOffers() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) return parsed;
+        }
+      } catch (err) {}
+      return JSON.parse(JSON.stringify(DEFAULT_OFFERS));
+    }
+
+    function saveToStorage(data) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      } catch (err) {}
+    }
+
+    function renderOffers() {
+      const grid = document.getElementById('offersGrid');
+      const visibleOffers = offersData.filter(o => o.active);
+
+      if (visibleOffers.length === 0) {
+        grid.innerHTML = '<div class="card"><p>لا توجد عروض مفعّلة حالياً.</p></div>';
+        return;
+      }
+
+      grid.innerHTML = visibleOffers.map(offer => `
+        <div class="card offer-card">
+          <div>
+            <span class="offer-badge">${escapeHtml(offer.badge || 'عرض خاص')}</span>
+            <h3>${escapeHtml(offer.title)}</h3>
+            <p>${escapeHtml(offer.description)}</p>
+          </div>
+          <div class="card-actions">
+            <button type="button" class="btn-offer" onclick="openBookingModal('عرض: ${escapeJs(offer.title)}')">حجز والاستفادة من العرض</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function requestAdminAccess() {
+      if (isAdminAuthenticated) {
+        openOffersManager();
+        return;
+      }
+      const entered = prompt('أدخل كلمة مرور إدارة العروض:');
+      if (entered === null) return;
+      if (entered === ADMIN_PASS) {
+        isAdminAuthenticated = true;
+        openOffersManager();
+      } else {
+        alert('كلمة المرور غير صحيحة.');
+      }
+    }
+
+    function openOffersManager() {
+      if (!isAdminAuthenticated) {
+        requestAdminAccess();
+        return;
+      }
+      draftOffers = JSON.parse(JSON.stringify(offersData));
+      document.getElementById('exportCodeBox').style.display = 'none';
+      renderAdminOffers();
+      openModal('offersManagerModal');
+    }
+
+    function renderAdminOffers() {
+      const container = document.getElementById('adminOffersList');
+      container.innerHTML = draftOffers.map((offer, idx) => `
+        <div class="admin-offer-item">
+          <div class="admin-offer-top">
+            <label class="checkbox-row">
+              <input type="checkbox" ${offer.active ? 'checked' : ''} onchange="updateDraftOffer(${idx}, 'active', this.checked)" />
+              <span>عرض مفعّل (ظاهر للزوار)</span>
+            </label>
+            <button type="button" class="btn-sm btn-delete" onclick="removeDraftOffer(${idx})">حذف</button>
+          </div>
+
+          <div class="admin-row-2">
+            <div class="form-group">
+              <label>شارة العرض / النسبة</label>
+              <input type="text" value="${escapeAttr(offer.badge)}" oninput="updateDraftOffer(${idx}, 'badge', this.value)" placeholder="مثال: خصم 20%" />
+            </div>
+            <div class="form-group">
+              <label>عنوان العرض</label>
+              <input type="text" value="${escapeAttr(offer.title)}" oninput="updateDraftOffer(${idx}, 'title', this.value)" placeholder="عنوان العرض" />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:0;">
+            <label>تفاصيل العرض</label>
+            <input type="text" value="${escapeAttr(offer.description)}" oninput="updateDraftOffer(${idx}, 'description', this.value)" placeholder="وصف مختصر للعرض" />
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateDraftOffer(idx, field, value) {
+      draftOffers[idx][field] = value;
+    }
+
+    function addNewOffer() {
+      draftOffers.push({
+        id: 'offer_' + Date.now(),
+        badge: 'عرض جديد',
+        title: 'تخفيض خاص جديد',
+        description: 'تفاصيل العرض والتخفيض المتاح حالياً.',
+        active: true
+      });
+      renderAdminOffers();
+    }
+
+    function removeDraftOffer(idx) {
+      draftOffers.splice(idx, 1);
+      renderAdminOffers();
+    }
+
+    function saveOffersChanges() {
+      offersData = JSON.parse(JSON.stringify(draftOffers));
+      saveToStorage(offersData);
+      renderOffers();
+      closeModal('offersManagerModal');
+    }
+
+    function resetDefaultOffers() {
+      draftOffers = JSON.parse(JSON.stringify(DEFAULT_OFFERS));
+      offersData = JSON.parse(JSON.stringify(DEFAULT_OFFERS));
+      saveToStorage(offersData);
+      renderOffers();
+      renderAdminOffers();
+    }
+
+    function toggleExportCode() {
+      const box = document.getElementById('exportCodeBox');
+      if (box.style.display === 'block') {
+        box.style.display = 'none';
+        return;
+      }
+      box.value = 'const DEFAULT_OFFERS = ' + JSON.stringify(draftOffers, null, 2) + ';';
+      box.style.display = 'block';
+      box.select();
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+        }
+      });
+    });
+
+    function openBookingModal(clinicName) {
+      document.getElementById('clinicNameInput').value = clinicName;
+      document.getElementById('selectedClinicLabel').innerHTML = 'القسم / العرض المختار: <strong>' + escapeHtml(clinicName) + '</strong>';
+      document.getElementById('bookingNotes').value = '';
+      openModal('bookingModal');
+    }
+
+    function openPharmacyModal() {
+      document.getElementById('pharmacyNotes').value = '';
+      openModal('pharmacyModal');
+    }
+
+    function toggleDeliveryFields() {
+      const checked = document.getElementById('deliveryCheckbox').checked;
+      const box = document.getElementById('deliveryFields');
+      const addressInput = document.getElementById('deliveryAddress');
+
+      if (checked) {
+        box.classList.add('show');
+        addressInput.required = true;
+      } else {
+        box.classList.remove('show');
+        addressInput.required = false;
+      }
+    }
+
+    function openLabModal() {
+      document.getElementById('labNotes').value = '';
+      openModal('labModal');
+    }
+
+    function sendToWhatsApp(text) {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    function submitBooking(e) {
+      e.preventDefault();
+      const clinic = document.getElementById('clinicNameInput').value;
+      const name = document.getElementById('patientName').value.trim();
+      const age = document.getElementById('patientAge').value.trim();
+      const time = document.getElementById('visitTime').value;
+      const notes = document.getElementById('bookingNotes').value.trim();
+
+      let msg =
+        `السلام عليكم، أرغب بحجز موعد في *مستوصف الشهيد راشد علي المضرحي*:\n` +
+        `• *القسم / العرض:* ${clinic}\n` +
+        `• *اسم المريض:* ${name}\n` +
+        `• *العمر:* ${age} سنة\n` +
+        `• *الفترة المفضلة:* ${time}`;
+
+      if (notes) {
+        msg += `\n• *ملاحظات:* ${notes}`;
+      }
+
+      sendToWhatsApp(msg);
+      closeModal('bookingModal');
+    }
+
+    function submitPharmacyRequest(e) {
+      e.preventDefault();
+      const medName = document.getElementById('medName').value.trim();
+      const medStrength = document.getElementById('medStrength').value.trim();
+      const medType = document.getElementById('medType').value;
+      const name = document.getElementById('medPatientName').value.trim();
+      const age = document.getElementById('medPatientAge').value.trim();
+      const wantsDelivery = document.getElementById('deliveryCheckbox').checked;
+      const address = document.getElementById('deliveryAddress').value.trim();
+      const phone = document.getElementById('deliveryPhone').value.trim();
+      const notes = document.getElementById('pharmacyNotes').value.trim();
+
+      let msg =
+        `السلام عليكم، *طلب واستعلام دواء - الصيدلية المركزية* (مستوصف الشهيد راشد علي المضرحي):\n` +
+        `• *اسم الدواء:* ${medName}\n` +
+        `• *التركيز:* ${medStrength}\n` +
+        `• *النوع:* ${medType}\n` +
+        `• *اسم المريض:* ${name}\n` +
+        `• *العمر:* ${age} سنة\n` +
+        `• *خدمة التوصيل:* ${wantsDelivery ? 'نعم (مطلوب توصيل)' : 'لا (استلام من الصيدلية)'}`;
+
+      if (wantsDelivery) {
+        msg += `\n• *عنوان التوصيل:* ${address}`;
+        if (phone) {
+          msg += `\n• *رقم التواصل للتوصيل:* ${phone}`;
+        }
+      }
+
+      if (notes) {
+        msg += `\n• *ملاحظات:* ${notes}`;
+      }
+
+      sendToWhatsApp(msg);
+      closeModal('pharmacyModal');
+    }
+
+    function submitLabInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('labPatientName').value.trim();
+      const age = document.getElementById('labPatientAge').value.trim();
+      const testInfo = document.getElementById('labTestName').value.trim();
+      const notes = document.getElementById('labNotes').value.trim();
+
+      let msg =
+        `السلام عليكم، *استعلام عن نتيجة فحص مخبري* (مستوصف الشهيد راشد علي المضرحي):\n` +
+        `• *اسم المريض:* ${name}\n` +
+        `• *العمر:* ${age} سنة`;
+
+      if (testInfo) {
+        msg += `\n• *نوع التحليل / رقم الفحص:* ${testInfo}`;
+      }
+
+      if (notes) {
+        msg += `\n• *ملاحظات:* ${notes}`;
+      }
+
+      sendToWhatsApp(msg);
+      closeModal('labModal');
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function escapeAttr(str) {
+      return escapeHtml(str).replace(/'/g, '&#39;');
+    }
+
+    function escapeJs(str) {
+      return String(str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    }
+
+    renderOffers();
+
+    if (window.location.hash === '#admin') {
+      requestAdminAccess();
+    }
+  </script>
+
+</body>
+</html>
